@@ -31,7 +31,11 @@ mongoose.connect(url, {
     app.listen(PORT, () => {
       console.log(`Server listening on port ${PORT}`);
     });
+
+    module.exports = app;
   })
   .catch((error) => {
     console.error('Failed to connect to MongoDB Atlas', error);
   });
+
+
