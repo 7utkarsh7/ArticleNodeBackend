@@ -20,6 +20,9 @@ mongoose.connect(url, {
     app.use(bodyParser.json());
 
     // Routes
+    app.get('/', (req, res) => {
+      res.send('Sploot Assignment Backend');
+    });
     app.use('/api', UserRouter);
     app.use('/api', ArticleRouter);
 
